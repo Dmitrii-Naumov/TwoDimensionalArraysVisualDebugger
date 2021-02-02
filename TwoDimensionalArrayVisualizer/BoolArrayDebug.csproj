@@ -45,21 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebuggerSide.cs" />
-    <Compile Include="DisplayForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DisplayForm.Designer.cs">
-      <DependentUpon>DisplayForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DisplayForm.resx">
-      <DependentUpon>DisplayForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TwoDimensionalArrayVisualizer.dll" />
+    <ProjectReference Include="..\DebuggerDisplayForm\DebuggerDisplayForm.csproj">
+      <Project>{a60bec77-e75a-4e76-a194-04aa529fb81b}</Project>
+      <Name>DebuggerDisplayForm</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
