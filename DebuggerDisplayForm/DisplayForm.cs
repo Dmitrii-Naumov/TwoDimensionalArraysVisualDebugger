@@ -77,6 +77,8 @@ namespace TwoDimensionalArrayVisualizer
 						for (int l = 0; l < PictureScale; l++)
 						{
 							int color = (int)Math.Round(((ArrayToShow[i, j] - MinValue) / (MaxValue - MinValue)) * 255);
+							if (MinValue == MaxValue)
+								color = 0;
 							img.SetPixel(i * PictureScale + k, j * PictureScale + l, Color.FromArgb(color, color, color));
 						}
 					}
